@@ -16,14 +16,14 @@ public class lojaTintaExpandido {
         double precoGaloes = qntdGaloesNecessarios*25;
 
         //pintando com tinta e galao
-        double qntdLatasParaAmbos = litrosNecessarios/18;
-        double qntdGaloesParaAmbos = qntdLatasParaAmbos % 3.6;
+        double qntdLatasParaAmbos = litrosNecessarios / 18;
         
-        
+        double litrosRestantes = litrosNecessarios - (qntdLatasParaAmbos * 18);
 
-        System.out.println("Comprando apenas latas, voce vai gastar um total de R$" + precoLatas);
-        System.out.println("Comprando apenas galoes, voce vai gastar um total de R$" + precoGaloes);
-        System.out.println(qntdLatasParaAmbos);
-        System.out.println(qntdGaloesParaAmbos);
+        double qntdGaloesParaAmbos = Math.ceil(litrosRestantes / 3.6);
+        
+        System.out.println("Para uma parede de área " + areaParaPintar + "m², você vai precisar de " + qntdLatasNecessarias + " latas de 18 litros, com o custo de R$" + precoLatas + ".");
+        System.out.println("Para uma parede de área " + areaParaPintar + "m², você vai precisar de " + qntdGaloesNecessarios + " latas de 3.6 litros, com o custo de R$" + precoGaloes + ".");
+        System.out.println("Para uma parede de área " + areaParaPintar + "m², você vai precisar de " + qntdLatasParaAmbos + " latas de 18 litros e " + qntdGaloesParaAmbos + " latas de 3.6, com o custo de R$ [preco].");
     }
 }
